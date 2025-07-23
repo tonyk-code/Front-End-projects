@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Noto Sans", sans-serif;
+    background: linear-gradient(to bottom, rgba(5,10,29,255), rgba(10,22,64,255));
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(31,37,53,255);
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+
+.visual-mode{
+    border: none;
+    background-color: rgb(46, 54, 73);
+    padding: 3px 3px 1px 3px;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.visual-mode:hover{
+    transition: all 0.1s ease;
+    outline: 1.5px solid rgba(243,92,85,255);
+    outline-offset: 2px;
+    cursor: pointer;
+}
+
+.visual-mode:active{
+    transition: all 0.1s ease-in-out;
+    scale: 0.95;
+    
+}
+
+.visual-mode-logo{
+    scale: 0.7;
+}
+
+.extension-list{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px 
+}
+
+.extension-list h2{
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.extension-list-option{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.extension-list-option-btn{
+    background-color: rgba(46, 54, 73, 255);
+    color: white;
+    font-weight: 100;
+    font-size: 0.65rem;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 17px;
+    cursor: pointer;
+}
+
+.extension-list-option-btn:hover{
+    transition: all 0.1s ease;
+    outline: 1.5px solid rgba(243,92,85,255);
+    outline-offset: 2px;
+}
+
+.extension-list-option-btn:active{
+    transition: all 0.1s ease-in-out;
+    scale: 0.95;
+}
+
+.active{
+    background-color: rgba(243,92,85,255);
+}
+
+.active:hover{
+    transition: none;
+    outline: none;
+}
+
+
+
+.main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-top: 10px;
+    gap: 20px;
+}
+
+.extension-item{
+    background-color: rgba(46, 54, 73, 0.515);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px rgba(255, 255, 255, 0.127) solid;
+    color: white; 
+    width: 220px;
+}
+
+.extension-item-detail{
+    height: 50px;
+    position: relative;
+    top: -38px;
+    left: 40px;
+    width: calc(100% - 35px);
+}
+
+.extension-item-name{
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.extension-item-content{
+    margin-top: 4px;
+    font-size: 0.6rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.extension-item-actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.remove {
+    border-radius: 17px;
+    background-color: rgba(46, 54, 73, 0.577);
+    border: 1px rgba(255, 255, 255, 0.127) solid;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 0.65rem;
+    padding: 5px 15px;
+    width: 90px;
+    cursor: pointer;
+}
+
+.remove:hover {
+    background-color: #c72e00e8;
+}
+
+.remove span {
+ cursor: pointer;
+ display: inline-block;
+ position: relative;
+ transition: 0.5s;
+}
+
+.remove span:after {
+ content: '»';
+ position: absolute;
+ opacity: 0;
+ top: 0;
+ right: -15px;
+ transition: 0.5s;
+}
+
+.remove:hover span {
+ padding-right: 15px;
+}
+
+.remove:hover span:after {
+ opacity: 1;
+ right: 0;
+}
+
+.remove:active {
+    transition: all 0.19s ease;
+    scale: 0.95;
+}
+
+input{
+    -webkit-appearance: none;
+    position: relative;
+    width: 30px;
+    height: 15px;
+    background-color: rgba(46, 54, 73, 0.577);
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+}
+
+input::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    border: 2.5px solid rgba(255, 255, 255, 0.699);
+    width: 0.3rem;
+    height: 0.3rem;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: left 0.3s;
+}
+
+input:checked{
+    background-color: rgba(243, 92, 85, 255);
+}
+
+input:checked::after{
+    background-color: rgb(255, 255, 255);
+    left: 70%;
+}
+
+
+
+
+@media (max-width: 430px) {
+    .extension-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .extension-list h2 {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .extension-list-option{
+        gap: 5px;
+    }
+
+    .main {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/***************** Light mode *****************/
+
+
+body.light-mode{
+    background: linear-gradient(to bottom , rgba(236,243,253,255) , rgba(239,251,249,255));
+}
+
+body.light-mode .container .heading{
+    background-color: rgba(252,253,255,255);
+}
+
+body.light-mode .container .heading .path1{
+    fill: rgba(17,26,62,255);
+}
+
+body.light-mode .container .heading .visual-mode{
+    background-color: rgba(238,238,237,255);
+}
+
+body.light-mode .container .heading .path2{
+    stroke: rgba(17,26,62,255);
+}
+
+body.light-mode .container .extension-list h2{
+    color: rgba(17,26,62,255);
+}
+
+body.light-mode .container .extension-list .extension-list-option .extension-list-option-btn{
+    background-color: rgba(252,253,255,255);
+    color: rgba(17,26,62,255);
+}
+
+body.light-mode .container .extension-list .extension-list-option .extension-list-option-btn.active{
+    transition: background-color 0.2s ease-in-out;
+    background-color: rgba(243,92,85);
+    color: rgba(252,253,255,255);
+}
+
+body.light-mode .container .main .extension-item{
+    border: 1px solid rgba(128, 128, 128, 0.186);
+    background-color: rgba(252,253,255,255);
+    box-shadow: 0px 5px 10px rgba(128, 128, 128, 0.219);
+}
+
+body.light-mode .container .main .extension-item .extension-item-detail .extension-item-name{
+    color: rgba(34,41,71,255);
+}
+
+body.light-mode .container .main .extension-item .extension-item-detail .extension-item-content{
+    color: rgb(119, 118, 118);
+}
+
+body.light-mode .container .main .extension-item .extension-item-actions .remove{
+    color: rgba(17,26,62,255);
+    background-color: transparent;
+    border: 1px rgba(17,26,62,255) solid;
+}
+
+body.light-mode .container .main .extension-item .extension-item-actions .remove:hover{
+    background-color: #c72e00e8;
+    border: 1px #c72e00e8 solid;
+    color: rgba(252,253,255,255);
+}
+
+
