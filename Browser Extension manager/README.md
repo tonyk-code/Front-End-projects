@@ -51,7 +51,18 @@ To run this project locally:
 
 ## 📸 Preview
 
-![image alt](https://github.com/tonyk-code/Front-End-projects/blob/925aa0b4b7719ecd435f6356e42be52a86a68fae/Browser%20Extension%20manager/preview/capture_20250723174316684.bmp)
+<img src="https://github.com/tonyk-code/Front-End-projects/blob/925aa0b4b7719ecd435f6356e42be52a86a68fae/Browser%20Extension%20manager/preview/capture_20250723174316684.bmp" width="600" alt="image alt">
+
+<img src="https://github.com/tonyk-code/Front-End-projects/blob/e96af4fe6e71d2619f874a6cd486052e8c6ee37b/Browser%20Extension%20manager/preview/capture_20250723174343702.bmp" width="600" alt="image alt">
+
+<img src="https://github.com/tonyk-code/Front-End-projects/blob/e96af4fe6e71d2619f874a6cd486052e8c6ee37b/Browser%20Extension%20manager/preview/capture_20250723174403631.bmp" width="600" alt="image alt">
+
+<img src="https://github.com/tonyk-code/Front-End-projects/blob/e96af4fe6e71d2619f874a6cd486052e8c6ee37b/Browser%20Extension%20manager/preview/capture_20250723174433926.bmp" width="600" alt="image alt">
+
+<img src="https://github.com/tonyk-code/Front-End-projects/blob/e96af4fe6e71d2619f874a6cd486052e8c6ee37b/Browser%20Extension%20manager/preview/capture_20250723174907481.bmp" width="600" alt="image alt">
+
+<img src="https://github.com/tonyk-code/Front-End-projects/blob/e96af4fe6e71d2619f874a6cd486052e8c6ee37b/Browser%20Extension%20manager/preview/capture_20250723174922688.bmp" width="600" alt="image alt">
+
 
 
 ## 🧑‍💻 Author
