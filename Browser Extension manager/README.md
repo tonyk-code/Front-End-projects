@@ -51,7 +51,7 @@ To run this project locally:
 
 ## 📸 Preview
 
-![image alt]()
+![image alt](https://github.com/tonyk-code/Front-End-projects/blob/925aa0b4b7719ecd435f6356e42be52a86a68fae/Browser%20Extension%20manager/preview/capture_20250723174316684.bmp)
 
 
 ## 🧑‍💻 Author
