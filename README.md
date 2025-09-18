@@ -75,7 +75,7 @@ This project is a growing canvas of what I’ve learned — and what I’m yet t
 Feel free to reach out, connect, or suggest collaboration ideas.
 
 **GitHub:** [@tonyk-code](https://github.com/tonyk-code)  
-**Email:** *yesehakkebere@gmail.com*
+**Email:** *codeolmpus@gmail.com*
 
 ---
 
