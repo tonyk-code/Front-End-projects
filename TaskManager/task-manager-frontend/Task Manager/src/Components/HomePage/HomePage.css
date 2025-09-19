@@ -1,0 +1,232 @@
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 13px 10px;
+  background-color: rgba(255, 255, 255, 0.69);
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: #d5d5d7 solid 2px;
+  padding: 7px 10px;
+  border-radius: 10px;
+  margin-left: 15px;
+  width: 30%;
+}
+.header-left input {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  color: #2b2f32;
+  background-color: transparent;
+  width: 90%;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-right: 10px;
+}
+
+.account-name {
+  display: inline;
+  text-transform: capitalize;
+  color: #2b2f32;
+  font-weight: 500;
+  color: #686873;
+}
+
+.task-manager-text {
+  padding: 20px 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2b2f32;
+}
+
+.display-buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px 5px;
+  align-items: center;
+}
+
+.display-buttons-left {
+  margin-left: 25px;
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  padding: 5px px;
+  border-radius: 5px;
+}
+
+.grid-view-btn,
+.calender-view-btn {
+  border: none;
+  padding: 10px 13px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.7rem;
+  color: #969697;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.542);
+  font-weight: bold;
+}
+
+.fa-grip , .fa-calendar{
+  color: #969697;
+}
+
+.grid-view-btn:hover,
+.calender-view-btn:hover {
+  transform: scale(1.06);
+  transition: transform ease 0.2s;
+}
+
+.active-btn , .active-btn .fa-grip , .active-btn .fa-calendar{
+  color: #ebf4f5;
+}
+
+.active-btn{
+  background-color: #2b2f32;
+}
+
+.active-btn:hover{
+  transform: scale(1);
+  transition: none
+}
+
+.add-new-task-btn {
+  background-color: #107bf7;
+  border: none;
+  margin-right: 10px;
+  padding: 10px 20px;
+  color: #fafbfd;
+  border-radius: 7px;
+  text-align: center;
+  cursor: pointer;
+}
+.add-new-task-btn {
+  background: linear-gradient(to top right, #19b0ec, #456fe8);
+  border: none;
+  margin-right: 10px;
+  padding: 10px 20px;
+  color: #fafbfd;
+  border-radius: 7px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.add-new-task-btn:hover {
+  background-color: #126ed8;
+  transform: scale(1.06);
+  transition: transform ease 0.3s;
+}
+
+.task-grid {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px 30px;
+        justify-content: center;
+      }
+.no-task-text{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 500;
+  margin-top: 30px;
+  color: #969697b7;
+  text-align: center;
+  width: 100%;
+}
+
+
+/* Base styles remain as you already have them */
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 1200px) {
+  .header-left {
+    width: 40%;
+  }
+  .display-buttons-left {
+    width: 200px;
+  }
+}
+
+@media (max-width: 992px) {
+  .header-left {
+    width: 50%;
+  }
+  .display-buttons-left {
+    width: 200px;
+  }
+  .task-grid {
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    gap: 10px;
+    padding: 10px 15px;
+  }
+
+  .header-left {
+    width: 40%;
+    margin-left: 0;
+  }
+
+  .display-buttons-left {
+    width: 200px;
+  }
+
+  .task-container {
+    flex: 0 0 45%; /* two per row */
+    margin-bottom: 10px;
+  }
+
+  .task-manager-text {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .account-name {
+    display: none;
+  }
+  .task-container {
+    flex: 0 0 90%; /* full width on small screens */
+  }
+
+  .display-buttons-left {
+    width: 140px;
+  }
+
+  .grid-view-btn,
+  .table-view-btn,
+  .calender-view-btn {
+    font-size: 0.5rem;
+    padding: 5px 8px;
+  }
+
+  .add-new-task-btn {
+    font-size: 0.6rem;
+    padding: 10px 10px;
+  }
+
+  .task-manager-text {
+    font-size: 1.1rem;
+  }
+
+  .header-left input {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,113 @@
+.blur-background{
+  position: fixed;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.633);
+  width: 100%;
+  height: 100vh;
+  z-index: 4;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.add-new-task-form {
+  position: fixed;
+  background-color: rgba(201, 223, 242, 0.565);
+  width: 450px;
+  height: 500px;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0;
+  border-radius: 10px;
+  /* blur the background behind the modal */
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.155) , -10px -10px 20px rgba(0, 0, 0, 0.155);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* Safari support */
+  pointer-events: none; /* prevent clicks when hidden */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.add-new-task-form.show {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+h2 {
+  text-align: center;
+  border-bottom: 1px solid #d5d5d7;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1.3rem;
+  color: #2b2f32;
+  background-color: rgba(238, 236, 236, 0.362);
+}
+
+.form-field {
+  margin-top: 15px;
+  padding: 0 15px;
+  border: none;
+}
+
+.label-text {
+  display: block;
+  font-weight: bold;
+  color: #2b2f32;
+  margin-bottom: 5px;
+}
+
+.form-field input {
+  border: #d5d5d7 solid 2px;
+  width: 100%;
+  padding: 10px 5px;
+  border-radius: 10px;
+  font-family: inherit;
+  outline: none;
+}
+
+.form-field textarea {
+  resize: none;
+  border: #d5d5d7 solid 2px;
+  padding: 10px 5px;
+  font-family: inherit;
+  border-radius: 10px;
+  width: 100%;
+  outline: none;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border: #126ed8 solid 2px;
+  transition: border ease 0.3s;
+}
+
+.form-actions {
+  text-align: right;
+  margin: 10px 15px 0 0;
+}
+
+.submit-task-btn {
+  padding: 7px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  background-color: #126ed8;
+}
+
+.close-task-btn {
+  padding: 7px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.submit-task-btn:hover,
+.close-task-btn:hover {
+  transform: scale(1.06);
+  transition: transform ease 0.3s;
+}
