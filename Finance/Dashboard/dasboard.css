@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: linear-gradient(to bottom , rgb(217, 239, 246) , white);
+  font-family: "Nunito", sans-serif;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: 10px auto;
+}
+
+.brand-name{
+  font-family: "Noto Sans", sans-serif;
+  display: inline;
+  margin-left: 1px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.871);
+}
+
+.nav-menu{
+  display: flex;
+  gap: 25px;
+}
+
+.nav-btn{
+  background-color: transparent;
+  border: none;
+  font-size: 0.7rem;
+  font-weight: bold;
+  font-family: inherit;
+}
+
+/* From Uiverse.io by alexmaracinaru */ 
+.login-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 0 10px;
+}
+
+.login-btn span {
+  padding-bottom: 7px;
+  letter-spacing: 3px;
+  font-size: 0.7rem;
+  padding-right: 15px;
+}
+
+.login-btn svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+
+
+.login-btn:hover svg {
+  fill: #000000;
+  transform: translateX(0);
+}
+
+.login-btn:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.login-btn:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+.hero-section{
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-text{
+  margin: 0 400px;
+}
+
+.headline{
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.subtext{
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.836);
+}
+
+.cta-btn{
+  margin-top: 10px;
+}
+
+.primary , .secondary{
+  padding: 5px 20px;
+  border: none;
+  border-radius: 50px;
+}
+
+.primary{
+  background-color: black;
+  color: white;
+  font-family: inherit;
+  margin-right: 15px;
+
+}
+
+.primary:hover , .secondary:hover{
+  cursor: pointer;
+  scale: 1.09;
+  transition: all 0.2s ease;
+}
+
+.secondary{
+  background-color: white;
+}
+
+.hero-image{
+  position: fixed;
+  bottom: -5px;
+  width: 100%;
+  z-index: -100;
+  text-align: center;
+}
+
+
+
+/* --------------------- RESPONSIVE DESIGN --------------------- */
+
+@media (min-width: 1277px) and (max-width: 1914px) {
+  .hero-image{
+    height: 100vh;
+    margin-top: 100px;
+  }
+  
+  .hero-image-img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero-text {
+    margin: 30px 250px;
+  }
+}
+
+
+
+/* Medium Devices: Tablets (1000px and down) */
+@media (max-width: 1000px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+  }
+
+  .hero-text {
+    margin: 30px 150px;
+  }
+
+  .headline {
+    font-size: 1.5rem;
+  }
+
+  .subtext {
+    font-size: 0.9rem;
+  }
+
+  .cta-btn {
+    padding: 6px 16px;
+    font-size: 0.85rem;
+  }
+
+  .hero-image-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Small Devices: Phones (560px and down) */
+@media (max-width: 560px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-text {
+    margin: 0 100px;
+  }
+
+  .headline {
+    font-size: 1.2rem;
+  }
+
+  .subtext {
+    font-size: 0.75rem;
+  }
+
+  .cta-btn {
+    padding: 5px 12px;
+    font-size: 0.75rem;
+  }
+
+  .login-btn span {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+  }
+
+  .hero-image-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+
+

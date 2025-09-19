@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Noto Sans", sans-serif;
+    background: linear-gradient( to  top , #ebf4f5 , #b5c6e0 );
+}
+
+.back-icon{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.back-icon:hover{
+    transition: all 0.1s ease;
+    outline: 2px solid rgba(128, 0, 128, 0.311);
+    outline-offset: 4px;
+}
+
+.back-icon i{
+    transition: 0.2s ease;
+}
+
+.back-icon:active i{
+    transform: translateX(-100%);
+    transition: 0.5s ease;
+}
+
+.login-wrapper{
+    display: flex;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    width: 850px;
+    height: 80vh;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.164);
+}
+
+.login-box{
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    height: 100%;
+}
+
+.login-header{
+    margin-top: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.login-welcome{
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, 0.816);
+}
+
+.login-subtext{
+    font-size: 0.6rem;
+    color: rgba(0, 0, 0, 0.745);
+}
+
+.login-form{
+    text-align: center;
+}
+
+.login-field{
+    width: 60%;
+    padding: 10px;
+    margin: 0 auto 10px;
+    border: 1px solid rgba(0, 0, 0, 0.329);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 50px;
+    align-items: center;
+}
+
+input{
+    outline: none;
+    border: none;
+    padding: 5px;
+    margin-left: 5px;
+    font-size: 0.6rem;
+    font-family: inherit;
+    width: 90%;
+    color: rgba(0, 0, 0, 0.715);
+}
+
+input::placeholder{
+    color: rgba(0, 0, 0, 0.329);
+}
+
+input:-webkit-autofill {
+  background-color: white !important;
+  transition: background-color 5000s ease-in-out 0s;
+  color: inherit !important;
+  font-family: inherit !important;
+}
+
+
+.fa-envelope{
+    color: rgba(0, 0, 0, 0.329);
+}
+
+.fa-eye-slash{
+    color: rgba(0, 0, 0, 0.329);
+}
+
+.fa-eye-slash:hover{
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.449);
+}
+
+.login-options{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 auto;
+}
+
+
+.login-remember{
+    font-size: 0.5rem;
+    color: rgba(0, 0, 0, 0.46);
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    
+}
+
+input[type="checkbox"]{
+    border: 1px solid rgba(0, 0, 0, 0.329);
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+}
+
+input[type="checkbox"]:checked{
+    accent-color: rgb(44, 108, 236);
+}
+
+input[type="checkbox"]:hover{
+    cursor: pointer;
+}
+
+.login-forgot{
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 0.5rem;
+    color: rgba(0, 0, 0, 0.46);
+}
+
+.login-forgot:hover{
+    color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.login-submit {
+  position: relative;
+  width: 60%;
+  border: none;
+  background-color: #141414;
+  height: 40px;
+  color: white;
+  font-size: .8em;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  margin: 20px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.login-submit::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.253);
+  height: 100%;
+  width: 150px;
+  top: 0;
+  left: -200px;
+  border-bottom-right-radius: 100px;
+  border-top-left-radius: 100px;
+  filter: blur(10px);
+  transition-duration: .5s;
+}
+
+.login-submit:hover::after {
+  transform: translateX(600px);
+  transition-duration: .5s;
+}
+
+.incorrect-email , .incorrect-password{
+    font-size: 0.5rem;
+    margin: 5px auto;
+    color: red;
+}
+
+.login-image-side{
+    border-radius: 14px;
+    background-image: url('../image/pawel-czerwinski-dTgIbuxsM2w-unsplash.jpg'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* shows full image */
+    width: 50%;
+    height: 100%;
+}
+
+
+/*****************Responsive************************/
+
+@media (max-width:907px){
+    .login-wrapper{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        height: 60vh;
+
+    }
+
+    .login-box{
+        width: 100%;
+    }
+
+    .login-image-side{
+        display: none;
+    }
+
+}
+
+@media (max-width:730px){
+    .login-wrapper{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 65vh;
+    }
+
+    .login-box{
+        width: 100%;
+    }
+}
+
+@media (max-width:350px){
+    .login-wrapper{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 90vh;
+    }
+
+    .login-field{
+        width: 90%;
+    }
+
+    .login-box{
+        width: 100%;
+    }
+}
+@media (max-height:500px){
+    .login-wrapper{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80vh;
+    }
+
+    .login-form{
+        width: 80%;
+    }
+
+    .login-box{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .login-image-side{
+        display: none;
+    }
+}
+
+
+
+
+
+

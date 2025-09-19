@@ -1,0 +1,65 @@
+import { login } from "../scripts/login.js";
+
+
+let loginDashboard ;
+
+dashBoard();
+
+export function dashBoard(){
+    document.body.innerHTML = `
+        <!-- Header / Navigation -->
+    <header class="navbar">
+      <div class="brand">
+        <img src="../image/logoipsum-282.png" alt="Finance Logo" width="15" height="15" />
+        <p class="brand-name">Finance</p>
+      </div>
+      <nav class="nav-menu">
+        <button class="nav-btn">Features</button>
+        <button class="nav-btn">Resources</button>
+        <button class="nav-btn">Events</button>
+        <button class="nav-btn">About Us</button>
+        <button class="login-btn">
+          <span class="hover-underline-animation"> Login </span> 
+            <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 46 16"><path id="Path_10" data-name="Path 10" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(30)"></path>
+            </svg>
+        </button>
+      </nav>
+    </header>
+
+
+    
+    <!-- Main Content -->
+    <main class="hero-section">
+        <div class="hero-text">
+            <h2 class="headline">Master Your Money, Shape Your Future</h2>
+            <p class="subtext">
+            Join our finance community to learn budgeting, investing, and smart money habits with like-minded learners.
+            </p>
+            <button class="cta-btn primary">
+            Get Started <i class="fa-solid fa-arrow-right" style="color: #f3f4f7;"></i>
+            </button>
+            <button class="cta-btn secondary">Explore Resources</button>
+        </div>
+    </main>
+
+    <div class="hero-image">
+        <img class="hero-image-img" src="../image/home-background-min.webp" alt="Finance illustration" width="100%" height="580"/>
+    </div>
+    `
+    if(document.body.classList.contains('login-mode')){
+        document.body.classList.remove('login-mode');
+    }
+
+    else if(document.body.classList.contains('main-mode')){
+        document.body.classList.remove('main-mode')
+    }
+    document.body.classList.add('dashboard-mode');
+
+    loginDashboard = document.querySelector('.login-btn');
+
+    loginDashboard.addEventListener('click' , () => {
+        login();
+    })
+
+    
+}

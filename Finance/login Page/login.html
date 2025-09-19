@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css" />
+  <script src="https://kit.fontawesome.com/14cb9fde2e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <button class="back-icon">
+    <i class="fa-solid fa-arrow-left"></i>
+  </button>
+  <div class="login-wrapper">
+    
+    <div class="login-box">
+      <div class="login-header">
+        <img src="../image/house.png" alt="image" width="35" height="35">
+        <h2 class="login-welcome">Welcome Home</h2>
+        <p class="login-subtext">Please enter your details</p>
+      </div>
+
+      <form class="login-form">
+        <div class="login-field">
+          <input type="email" name="email" id="email" placeholder="Email" required />
+          <i class="fa-solid fa-envelope login-icon fa-xs"></i>
+        </div>
+        <p class="incorrect-email"></p>
+
+        <div class="login-field">
+          <input type="password" name="password" id="password" placeholder="Password" required />
+          <i class="fa-solid fa-eye-slash login-icon fa-xs" ></i>
+        </div>
+                  <p class="incorrect-password"></p>
+
+
+        <div class="login-options">
+          <label class="login-remember">
+            <input type="checkbox" id="remember-me"/>
+            Remember for 30 days
+          </label>
+          <button type="button" class="login-forgot">Forgot password?</button>
+        </div>
+
+        <button type="submit" class="login-submit">Login</button>
+      </form>
+    </div>
+
+    <div class="login-image-side">
+
+    </div>
+  </div>
+
+
+  <script src="../login Page/scripts/login.js" type="module"></script>
+</body>
+</html>
