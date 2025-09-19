@@ -1,4 +1,4 @@
-# 📝 Task Manager App  
+# 📝 Finance dashboard 
 
 A simple yet powerful **Finance dashboard** application built with **Vanila javascript (frontend)** a.  
 Created by [@tonyk_code](https://github.com/tonyk_code) 🚀  
